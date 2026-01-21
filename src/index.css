@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pink-50: #fff0f5;
+  --color-pink-100: #ffd6e0;
+  --color-pink-200: #ffadc2;
+  --color-pink-300: #ff85a3;
+  --color-pink-400: #ff5c85;
+  --color-pink-500: #ff3366;
+
+  --font-handwriting: "Patrick Hand", cursive;
+  --font-display: "Indie Flower", cursive;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+}
+
+body {
+  background-color: var(--color-pink-50);
+  font-family: var(--font-handwriting);
+  font-size: 18px;
+  /* Improved base size */
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: #4a4a4a;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+/* Scrollbar beautification */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff0f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffadc2;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff85a3;
+}
